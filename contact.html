@@ -3,13 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>smart solutions - portofolio</title>
+        <title>smart solutions - contact</title>
         <link href="myStyle.css" rel="stylesheet" type="text/css"> 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
     
     <body class="myBody">
-
         <nav class="myNav">
             <a href="index.html">smart solutions</a>
             <div class="nav-links">
@@ -22,31 +20,29 @@
             </div>
         </nav>
 
-        <section class="sub-header">
-            <h1>portofolio</h1>
-        </section>
-        
-        <section class="portofolio">
+        <section class="contact-header">
+            <h1>contact</h1>            
+        </section> 
+
+        <section class="contact-form">
             <div class="row">
-                <div class="portofolio-col">
-                    <h1>DentalCare</h1>
-                    <p>Gestiunea pacienților și a operațiilor<br>mai ușoară ca niciodată.</p>
-                    <a href="#" class="myButton">vezi mai mult</a>
+                <div class="contact-column">
+                    <iframe style="padding:30pt;" width="400" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Bloc%20A5,%20Aleea%20P%C4%83cii,%20Deva&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div>
-                <div class="portofolio-col">
-                    <img src="images/dentalcare.png" alt="dentalcare">
+                <div class="contact-column">
+                    <form action="form-handler.php">
+                        <input type="text" name="name" placeholder="Nume" required>
+                        <input type="text" name="email" placeholder="nume@exemlu.com" required>
+                        <input type="text" name="phone" placeholder="07xxxxxxxx" required>
+                        <textarea rows="8" cols="50" name="message" placeholder="Mesaj" required></textarea>
+                        <button type="submit" class="myButton">Trimite</button>
+                    </form>
                 </div>
-                <div class="portofolio-col">
-                    <h1>OptiView</h1>
-                    <p>Evidența înregistrărilor de comenzi și diagnoză<br>oftalmologică la vârful degetelor.</p>
-                    <a href="#" class="myButton">vezi mai mult</a>
-                </div>
-                <div class="portofolio-col">
-                    <img src="images/optiview.png" alt="dentalcare">
-                </div>                
             </div>
+            
+            
         </section>
-        
+
         <section class="footer">
             <h4>smart solutions©</h4>
             <p>Est. 2022</p>
