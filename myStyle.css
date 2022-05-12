@@ -68,7 +68,7 @@ body.myBody {
     margin-left:50px;
 }
 
-.header {
+.main-header {
     height: 100%;
     box-sizing: border-box;
     width: 100%;
@@ -82,33 +82,47 @@ body.myBody {
     align-items: center;
 }
 
-.sub-header {
-    max-height: 100vh;
+.portfolio-header {
+    height: 40%;
     width: 100%;
     background-image: linear-gradient(
-        rgba(255, 162, 22, 0.575),
-        rgba(0, 16, 46, 0.733)
+        rgba(255, 162, 22, 0.575) 20%,
+        rgba(0, 16, 46, 0.733) 90%,
+        rgb(149, 148, 175) 99%
     ), url(./images/clinic2.jpg);
     background-position: center;
     background-size: cover;
     text-align: center;
     color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.sub-header h1 {
+.portfolio-header h1 {
     font-size: 62pt;
-    padding: 5% 0;
+    margin-top: 5%;
+}
+
+.portfolio-header i {
+    font-size: 64pt;
+    text-shadow: #000 0px 0px 20px;
+    transition: 1s;
+}
+
+.portfolio-header i:hover {
+    transform: rotate(360deg);
 }
 
 .about-header {
-    max-height: 100vh;
-    height: 80%;
+    height: 100%;
     width: 100%;
     background-image: linear-gradient(
         rgba(184, 8, 8, 0.822),
         rgba(0, 16, 46, 0.733)
     ), url(./images/clinic3.jpg);
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     text-align: center;
     color:white;
@@ -136,12 +150,12 @@ body.myBody {
 }
 
 .contact-header {
-    max-height: 100vh;
-    height: 20%;
+    height: 40%;
     width: 100%;
     background-image: linear-gradient(
-        rgba(255, 255, 255, 0.349),
-        rgba(0, 16, 46, 0.733)
+        rgba(255, 255, 255, 0.349) 0%,
+        rgba(0, 16, 46, 0.733) 90%,
+        rgb(149, 148, 175) 99%
     ), url(./images/clinic3.jpg);
     background-position: center;
     background-size: cover;
@@ -154,9 +168,18 @@ body.myBody {
 }
 
 .contact-header h1 {
-    padding:20pt 0;
-    font-size: 30pt;
-    font-variant: small-caps;
+    font-size: 62pt;
+    margin-top: 5%;
+}
+
+.contact-header i {
+    font-size: 64pt;
+    text-shadow: #000 0px 0px 20px;
+    transition: 2s;
+}
+
+.contact-header i:hover {
+    transform: rotate(360deg);
 }
 
 .contact-column {
@@ -252,15 +275,16 @@ body.myBody {
     color: #fff;
     margin: 0 13px;
     cursor: pointer;
+    font-size: 20pt;
 }
 
-.portofolio {
+.portfolio {
     width: 80%;
     min-height: 30vh;
     margin: auto;
     align-self: center;
-    padding-top: 80px;
-    padding-bottom: 50px;
+    padding-top: 2%;
+    padding-bottom: 5%;
     color: #fff;
 }
 
@@ -270,7 +294,7 @@ body.myBody {
     margin-bottom: 2%;
 }
 
-.portofolio-col {
+.portfolio-col {
     flex-basis: 50%;
     display: flex;
     align-items: center;
@@ -278,18 +302,24 @@ body.myBody {
     flex-direction: column;
 }
 
-.portofolio-col img{
+.portfolio-col img{
     width: 25%;
+    transition: 0.25s;
+    cursor:pointer;
 }
 
-.portofolio-col h1 {
+.portfolio-col img:hover{
+    width: 28%;
+}
+
+.portfolio-col h1 {
     padding-top: 0;
 }
 
-.portofolio-col p {
+.portfolio-col p {
     padding: 15px 0 25px;
 }
 
-.portofolio .myButton {
+.portfolio .myButton {
     font-size: 16px;
 }

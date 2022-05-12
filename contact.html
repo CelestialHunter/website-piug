@@ -21,16 +21,45 @@
         </nav>
 
         <section class="contact-header">
-            <h1>contact</h1>            
+            <h1>contact</h1>    
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>        
         </section> 
 
         <section class="contact-form">
+            <script>
+                function validateForm() {
+                    var name = document.forms["myForm"]["name"].value;
+                    var email = document.forms["myForm"]["email"].value;
+                    var phone = document.forms["myForm"]["phone"].value;
+                    var message = document.forms["myForm"]["message"].value;
+
+                    var name_regex = /^[a-zA-Z]{2,}$/;
+                    var number_regex = /^[0-9]{10}$/;
+                    var email_regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+                    if(!name.match(name_regex)) {
+                        alert("Please enter a valid name!");
+                        return false;
+                    }
+
+                    if(!email.match(email_regex)) {
+                        alert("Please enter a valid email!");
+                        return false;
+                    }
+
+                    if(!phone.match(number_regex)) {
+                        alert("Please enter a valid phone number!");
+                        return false;
+                    }
+                }
+
+            </script>
             <div class="row">
                 <div class="contact-column">
                     <iframe style="padding:30pt;" width="400" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Bloc%20A5,%20Aleea%20P%C4%83cii,%20Deva&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div>
                 <div class="contact-column">
-                    <form action="form-handler.php">
+                    <form name="myForm" action="form-handler.php" method="post" onsubmit="return(validateForm());">
                         <input type="text" name="name" placeholder="Nume" required>
                         <input type="text" name="email" placeholder="nume@exemlu.com" required>
                         <input type="text" name="phone" placeholder="07xxxxxxxx" required>

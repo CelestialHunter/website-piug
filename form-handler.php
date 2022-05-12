@@ -1,8 +1,8 @@
 <?php
-    $name = $_POST[''];
-    $email = $_POST[''];
-    $phone = $_POST[''];
-    $message = $_POST[''];
+    $name = $_POST["name"] ?? null;
+    $email = $_POST['email'] ?? null;
+    $phone = $_POST['post'] ?? null;
+    $message = $_POST['message'] ?? null;
 
     $email_from = 'noreply@smart-solutions.com';
 
@@ -13,5 +13,13 @@
                     "User Phone: $phone.\n".
                     "User Message: $message.\n";
 
-    $to = 
+    $to = 'adresatest@andreibaleafirmelelui';
+
+    $headers = "MAIL FROM: $email_from \r\n";
+
+    $headers .= "Reply-To: $email \r\n";
+    header("Location: contact.html");
+
+    mail($to,$email_subject,$email_body,$headers);
+
 ?>
