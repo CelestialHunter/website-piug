@@ -10,6 +10,7 @@ body.myBody {
 }
 
 .myNav {
+    max-height: 7%;
     display: flex;
     padding: 1% 6%;
     justify-content: space-between;
@@ -115,6 +116,64 @@ body.myBody {
     transform: rotate(360deg);
 }
 
+.portfolio-card {
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border: white 1px solid;
+    border-radius: 10px;
+    max-width: 40%;
+    min-width: 40%;
+
+    max-height: 20%;
+    min-height: 10%;
+}
+
+.portfolio-card .portfolio-col {
+    margin: 2%;
+}
+
+.portfolio {
+    width: 80%;
+    min-height: 30vh;
+    margin: auto;
+    align-self: center;
+    padding-bottom: 5%;
+    padding: 1%;
+    color: #fff;
+}
+
+.portfolio-col {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.portfolio-col img{
+    width: 40%;
+    transition: 0.25s;
+    cursor:pointer;
+}
+
+.portfolio-col img:hover{
+    width: 44%;
+}
+
+.portfolio-col h1 {
+    padding-top: 0;
+}
+
+.portfolio-col p {
+    padding: 15px 0 25px;
+}
+
+.portfolio .myButton {
+    font-size: 16px;
+}
+
 .about-header {
     height: 100%;
     width: 100%;
@@ -187,6 +246,7 @@ body.myBody {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
 .contact-column input, .contact-column textarea, .contact-column .myButton {
@@ -195,6 +255,10 @@ body.myBody {
     margin-bottom: 10px;
     outline: none;
     border: 1px solid #6b68af;
+}
+
+.contact-column iframe {
+    border-radius: 25px;
 }
 
 .location {
@@ -251,7 +315,7 @@ body.myBody {
 
 .footer {
     width: 100%;
-    max-height: fit-content;
+    max-height: 8%;
     text-align: center;
     padding: 20px 0;
     background-color: #6b68af;
@@ -278,48 +342,8 @@ body.myBody {
     font-size: 20pt;
 }
 
-.portfolio {
-    width: 80%;
-    min-height: 30vh;
-    margin: auto;
-    align-self: center;
-    padding-top: 2%;
-    padding-bottom: 5%;
-    color: #fff;
-}
-
 .row {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 2%;
-}
-
-.portfolio-col {
-    flex-basis: 50%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-}
-
-.portfolio-col img{
-    width: 25%;
-    transition: 0.25s;
-    cursor:pointer;
-}
-
-.portfolio-col img:hover{
-    width: 28%;
-}
-
-.portfolio-col h1 {
-    padding-top: 0;
-}
-
-.portfolio-col p {
-    padding: 15px 0 25px;
-}
-
-.portfolio .myButton {
-    font-size: 16px;
+    margin-bottom: 1%;
 }
