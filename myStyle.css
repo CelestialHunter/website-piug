@@ -119,20 +119,14 @@ body.myBody {
 .portfolio-card {
     display: flex;
     flex:1;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     width: 100%;
-    border: white 1px solid;
-    border-radius: 10px;
-    max-width: 40%;
-    min-width: 40%;
-
-    max-height: 20%;
-    min-height: 10%;
-}
-
-.portfolio-card .portfolio-col {
-    margin: 2%;
+    border: rgba(0, 0, 0, 0.021) 5px solid;
+    box-shadow: rgba(0, 0, 0, 0.418) 15px 15px 20px;
+    background-color: #6b68af0a;
+    border-radius: 50px;
+    margin: 0 2%;
 }
 
 .portfolio {
@@ -150,16 +144,18 @@ body.myBody {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 4% 0;
 }
 
 .portfolio-col img{
-    width: 40%;
+    width: 30%;
     transition: 0.25s;
     cursor:pointer;
+    
 }
 
 .portfolio-col img:hover{
-    width: 44%;
+    transform: translateY(-10pt);
 }
 
 .portfolio-col h1 {
@@ -168,10 +164,12 @@ body.myBody {
 
 .portfolio-col p {
     padding: 15px 0 25px;
+    margin:auto;
 }
 
 .portfolio .myButton {
     font-size: 16px;
+    margin:auto;
 }
 
 .about-header {
@@ -207,6 +205,52 @@ body.myBody {
     font-size: 16pt;
     padding: 20pt 0;
 }
+
+.about-card {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: rgba(0, 0, 0, 0.021) 5px solid;
+    box-shadow: rgba(0, 0, 0, 0.418) 15px 15px 20px;
+    background-color: #6b68af86;
+    border-radius: 20px;
+    margin: 0 2%;
+    max-width: 20%;
+    transition: 0.25s;
+}
+
+.about-card:hover {
+    transform: translateY(-10pt);
+    background-color: #6b68afcb;
+    cursor:pointer;
+}
+
+.about-col {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-col h1 {
+    padding: 0;
+    font-size: 20pt;
+}
+
+.about-col p {
+    padding: 0;
+    margin: auto;
+}
+
+.about-col img {
+    width: 30%;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.507) 0px 5px 5px;
+}
+
+
 
 .contact-header {
     height: 40%;
